@@ -69,5 +69,4 @@ void update_telemetry(void) {
 	telemetry.packets_rejected_checksum = radio_packets_rejected_checksum;
 	telemetry.packets_rejected_reserved = radio_packets_rejected_reserved;
 	telemetry.packets_rejected_other = radio_packets_rejected_other;
-
 }
