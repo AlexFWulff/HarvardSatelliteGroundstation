@@ -286,7 +286,7 @@
     (add_net "Net-(D3-Pad1)")
   )
 
-  (module openlst:SF2136E locked (layer F.Cu) (tedit 5D814269) (tstamp 5B31BE20)
+  (module openlst:SF2136E locked (layer F.Cu) (tedit 5D866C6E) (tstamp 5B31BE20)
     (at 157.25 59.75 180)
     (path /5B32AE24)
     (attr smd)
