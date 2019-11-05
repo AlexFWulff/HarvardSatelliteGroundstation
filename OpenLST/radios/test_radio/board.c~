@@ -45,6 +45,12 @@ void board_init(void) {
         // No special function for P1_5 (IOCFG0)
 }
 
+uint8_t custom_commands(const __xdata command_t *cmd, uint8_t len, __xdata command_t *reply) {
+  switch (cmd->header.command) {
+
+  }
+}
+
 void board_led_set(__bit led_on) {
   P0_7 = led_on;
 }

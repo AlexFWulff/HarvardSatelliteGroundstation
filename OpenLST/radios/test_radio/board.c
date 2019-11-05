@@ -17,6 +17,9 @@
 #include <cc1110.h>
 #include "cc1110_regs.h"
 
+#include "commands.h"
+#include "board_defaults.h"
+
 void board_init(void) {
 	// LED0 setup - just turn it on
 	P0SEL &= ~(1<<6);  // GPIO not peripheral
@@ -43,6 +46,13 @@ void board_init(void) {
         // P1_6 = PA_PD  (asserted low in RX) = !LST_RX_MODE
         IOCFG1 = IOCFG1_GDO1_INV_ACTIVE_LOW | IOCFG_GDO_CFG_LNA_PD;
         // No special function for P1_5 (IOCFG0)
+}
+
+uint8_t custom_commands(const __xdata command_t *cmd, uint8_t len, __xdata command_t *reply) {
+  switch (cmd->header.command) {
+    case custom_msg_test:
+      break;
+  }
 }
 
 void board_led_set(__bit led_on) {
